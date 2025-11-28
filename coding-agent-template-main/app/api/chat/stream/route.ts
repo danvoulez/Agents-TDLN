@@ -24,7 +24,7 @@ export async function GET(req: NextRequest) {
         controller.enqueue(value);
         return pump();
       });
-      pump().catch(err => controller.error(err));
+      pump().catch((err: any) => controller.error(err));
     },
     cancel() { /*@ts-ignore*/ upstreamRes.body?.cancel?.(); }
   });
