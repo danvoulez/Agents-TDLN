@@ -21,7 +21,7 @@ import { toast } from 'sonner'
 interface TaskPageClientProps {
   taskId: string
   user: Session['user'] | null
-  authProvider: 'github' | 'vercel' | 'none'
+  authProvider: Session['authProvider'] | null
   maxSandboxDuration: number
   initialStars: number
 }
